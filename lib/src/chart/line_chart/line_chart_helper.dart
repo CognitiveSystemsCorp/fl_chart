@@ -50,8 +50,8 @@ class LineChartHelper {
         maxX = barData.mostRightSpot.x;
       }
 
-      if (barData.mostLeftSpot.x < minX) {
-        minX = barData.mostLeftSpot.x;
+      if (barData.mostLeftSpot!.x < minX) {
+        minX = barData.mostLeftSpot!.x;
       }
 
       if (barData.mostTopSpot.y > maxY) {

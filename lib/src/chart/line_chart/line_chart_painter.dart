@@ -265,7 +265,7 @@ class LineChartPainter extends AxisChartPainter<LineChartData> {
         holder,
         appendToPath: fromBarPath,
       );
-      final left = min(fromBarData.mostLeftSpot.x, toBarData.mostLeftSpot.x);
+      final left = min(fromBarData.mostLeftSpot!.x, toBarData.mostLeftSpot!.x);
       final top = max(fromBarData.mostTopSpot.y, toBarData.mostTopSpot.y);
       final right = max(fromBarData.mostRightSpot.x, toBarData.mostRightSpot.x);
       final bottom = min(
@@ -622,7 +622,7 @@ class LineChartPainter extends AxisChartPainter<LineChartData> {
     final viewSize = canvasWrapper.size;
 
     final belowBarLargestRect = Rect.fromLTRB(
-      getPixelX(barData.mostLeftSpot.x, viewSize, holder),
+      getPixelX(barData.mostLeftSpot!.x, viewSize, holder),
       getPixelY(barData.mostTopSpot.y, viewSize, holder),
       getPixelX(barData.mostRightSpot.x, viewSize, holder),
       viewSize.height,
@@ -703,7 +703,7 @@ class LineChartPainter extends AxisChartPainter<LineChartData> {
     final viewSize = canvasWrapper.size;
 
     final aboveBarLargestRect = Rect.fromLTRB(
-      getPixelX(barData.mostLeftSpot.x, viewSize, holder),
+      getPixelX(barData.mostLeftSpot!.x, viewSize, holder),
       0,
       getPixelX(barData.mostRightSpot.x, viewSize, holder),
       getPixelY(barData.mostBottomSpot.y, viewSize, holder),
@@ -839,7 +839,7 @@ class LineChartPainter extends AxisChartPainter<LineChartData> {
         barData.isStrokeJoinRound ? StrokeJoin.round : StrokeJoin.miter;
 
     final rectAroundTheLine = Rect.fromLTRB(
-      getPixelX(barData.mostLeftSpot.x, viewSize, holder),
+      getPixelX(barData.mostLeftSpot!.x, viewSize, holder),
       getPixelY(barData.mostTopSpot.y, viewSize, holder),
       getPixelX(barData.mostRightSpot.x, viewSize, holder),
       getPixelY(barData.mostBottomSpot.y, viewSize, holder),

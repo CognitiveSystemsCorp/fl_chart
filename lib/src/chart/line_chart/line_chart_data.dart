@@ -212,7 +212,7 @@ class LineChartBarData with EquatableMixin {
   final List<FlSpot> spots;
 
   /// We keep the most left spot to prevent redundant calculations
-  late final FlSpot mostLeftSpot;
+  FlSpot? mostLeftSpot = null;
 
   /// We keep the most top spot to prevent redundant calculations
   late final FlSpot mostTopSpot;
@@ -502,6 +502,7 @@ class LineChartBarData with EquatableMixin {
         shadow,
         isStepLineChart,
         lineChartStepData,
+        mostLeftSpot,
       ];
 }
 
